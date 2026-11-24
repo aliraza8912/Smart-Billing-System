@@ -1,0 +1,17 @@
+@page{size:A4;margin:15mm}
+@media print{
+  body{background:#fff!important;color:#111!important}
+  body *{visibility:hidden!important}
+  #printArea,#printArea *{visibility:visible!important}
+  #printArea{display:block!important;position:absolute;left:0;top:0;width:100%;margin:0;padding:0}
+  .bill-document{display:block!important;width:100%;max-width:none!important;box-shadow:none!important}
+  .receipt-mode{width:72mm!important;max-width:72mm!important;margin:0 auto!important;font-size:10px!important}
+  body.printing-receipt #printArea{width:72mm!important;margin:0 auto!important}
+  body.printing-receipt .bill-document{width:72mm!important;max-width:72mm!important}
+  body.printing-receipt .bill-doc-table{width:100%!important;table-layout:fixed}
+  body.printing-receipt .bill-doc-table th:first-child,body.printing-receipt .bill-doc-table td:first-child{width:38%}
+  body.printing-receipt .bill-doc-table th,body.printing-receipt .bill-doc-table td{overflow-wrap:anywhere}
+  .bill-doc-table{page-break-inside:auto}
+  .bill-doc-table tr{page-break-inside:avoid;page-break-after:auto}
+  .bill-doc-head,.bill-doc-total,.bill-doc-thanks{page-break-inside:avoid}
+}
